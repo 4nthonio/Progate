@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progate</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="responsive.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        </div>
+        <div class="header-right">
+          <a href="#">Product</a>
+          <a href="#">Promo</a>
+		  <a href="#">News</a>
+		  <a href="#">Contact Us</a>
+          <a href="#" class="login">Log in</a>
+        </div>
+      </div>
+    </header>
+	
+	<div class="top-wrapper">
+      <div class="container">
+        <h1>Your Journey</h1>
+        <h1>Start Here</h1>
+        <p>Progate is a web service where you can plan your travel.</p>
+        <p>We provide everything what you need for your journey.</p>
+      </div>
+    </div>
+	
+	<!--Data Slideshow-->
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+			<img src="https://dwidayatour.co.id/assets/images/slider/slider-0115.jpg"> 
+		</div>
+
+		<div class="mySlides fade">
+			<img src="https://dwidayatour.co.id/assets/images/slider/slider_ana_sept_2020-01.jpg">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="https://dwidayatour.co.id/assets/images/slider/web-021.jpg">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="https://dwidayatour.co.id/assets/images/slider/web-013.jpg">
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		
+	</div>
+
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+		<span class="dot" onclick="currentSlide(4)"></span>
+	</div>
+	<!--Data Slideshow-->
+
+	<!--script slideshow-->
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("dot");
+	if (n > slides.length) {slideIndex = 1}    
+	if (n < 1) {slideIndex = slides.length}
+	for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+	}
+	for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+	}
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+	<!--script slideshow-->
+	
+
+
+    <div class="lesson-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h1>Mengapa Memilih <img class="test-logo" src="https://prog-8.com/images/html/advanced/main_logo.png">?</h1>
+        </div>
+        <div class="lessons">
+		
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="https://dwidayatour.co.id/assets/images/icon/icon-value/32.png">
+			  <h3 class="progate1">Jaringan Terluas dan Terlengkap</h3>
+            </div>
+            <p class="text-contents">Dengan lebih dari 90 kantor cabang yang tersebar di Indonesia, Progate menghadirkan berbagai pilihan produk dan layanan perjalanan ke berbagai destinasi domestik dan internasional</p>
+          </div>
+		  
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="https://dwidayatour.co.id/assets/images/icon/icon-value/6.png">
+              <h3 class="progate1">Jaminan Pelayanan Terbaik</h3>
+            </div>
+            <p class="text-contents">Jaminan layanan perencanaan dan pemesanan produk perjalanan wisata yang mudah dan murah, didukung dengan konfirmasi singkat dan proses yang akurat.</p>
+          </div>
+		  
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="https://dwidayatour.co.id/assets/images/icon/icon-value/8.png">
+              <h3 class="progate1">Transaksi Aman dan Terpercaya</h3>
+            </div>
+            <p class="text-contents">Transaksi perjalanan Anda dijamin aman, didukung dengan sistem teknologi reservasi dan verifikasi terkini yang terpercaya.</p>
+          </div>
+		  
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="https://dwidayatour.co.id/assets/images/icon/icon-value/5.png">
+              <h3 class="progate1">Hotline 24 Jam</h3>
+            </div>
+            <p class="text-contents">Jangan sungkan untuk menghubungi kami. Travel Consultant kami yang berpengalaman siap melayani 24 jam setiap harinya, dimanapun Anda berada.</p>
+          </div>
+			
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+	
+    <div class="message-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h1>Ready to start your adventure?</h1>
+        </div>
+        <span class="btn message">START</span>
+      </div>
+    </div>
+	
+    <footer>
+      <div class="container">
+        <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
+        <p>Make Your Dreams Come True.</p>
+		</div>
+      </div>
+    </footer>
+	
+  </body>
+</html>
